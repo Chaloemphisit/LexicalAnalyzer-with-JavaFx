@@ -1,0 +1,23 @@
+.jfx-list-view{
+    -fx-background-color:  #F4F4F4;
+    -fx-background-insets: 0;
+    -fx-vertical-gap:10;
+    -fx-cell-vertical-margin:10;
+
+}
+.jfx-list-cell:hover {
+    -fx-background-color: #ff9e80;
+    -fx-text-fill: #ffffff; 
+    -fx-fill: #ffffff; 
+    -fx-font-size: 22;
+}
+
+.jfx-list-cell:selected {
+    -fx-background-color: #ffffff;
+}
+
+.jfx-list-cell {
+    /*-fx-background-color: #232323;*/
+    -fx-font-size: 18;
+    /*-fx-background-insets: 0.0;*/
+}

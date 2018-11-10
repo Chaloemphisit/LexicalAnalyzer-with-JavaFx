@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lexicalanalyzergui.MainController">
+   <children>
+      <AnchorPane fx:id="an_editor" layoutY="40.0" prefHeight="660.0" prefWidth="450.0" style="-fx-background-color: #E1E2E1;">
+         <children>
+            <Pane layoutY="-3.0" prefHeight="122.0" prefWidth="450.0" style="-fx-background-color: #ff1744;">
+               <children>
+                  <JFXButton fx:id="btnChooseFile" buttonType="RAISED" layoutX="14.0" layoutY="19.0" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #ff1744;" text="Choose File" textFill="WHITE">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></JFXButton>
+                  <JFXButton fx:id="btnAnalyze" buttonType="RAISED" layoutX="160.0" layoutY="19.0" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #ff1744;" text="Analyze" textFill="WHITE" />
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="306.0" layoutY="19.0" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #ff1744;" text="Clear" textFill="WHITE" />
+               </children>
+            </Pane>
+            <TextArea fx:id="txtEditor" layoutX="15.0" layoutY="77.0" prefHeight="564.0" prefWidth="420.0" promptText="Choose text file or Enter your text here" wrapText="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="an_result" layoutX="450.0" layoutY="40.0" prefHeight="660.0" prefWidth="450.0" style="-fx-background-color: #F4F4F4;" stylesheets="@style.css">
+         <children>
+            <JFXListView fx:id="listResult" layoutX="15.0" layoutY="20.0" prefHeight="620.0" prefWidth="420.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="-9.0" prefHeight="40.0" prefWidth="909.0" style="-fx-background-color: #c4001d;">
+         <children>
+            <Label fx:id="lblFilePath" layoutX="25.0" layoutY="7.0" prefHeight="27.0" prefWidth="794.0" text="Lexical Analyzer" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnClose" layoutX="853.0" layoutY="-2.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="57.0" text="x" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
