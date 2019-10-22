@@ -174,7 +174,7 @@ public class MainController implements Initializable {
                         if (tokenslist.indexOf(lexer.lexeme) != -1) {
                             addList("Identifier", "\"" + lexer.lexeme + "\" already in symbol table", true);
                         } else {
-                            addList("New Identifier", lexer.lexeme, false);
+                            addList("New identifier", lexer.lexeme, false);
                         }
                         tokenslist.add(lexer.lexeme);
                         break;
@@ -183,7 +183,7 @@ public class MainController implements Initializable {
                         addList("String", lexer.lexeme, false);
                         break;
                     case ERROR:
-                        addList("Error", "unrecognized symbol", true);
+                        addList("Error", "Unrecognized symbol", true);
                         break;
                     default:
                         addList("Nothing", "", false);
